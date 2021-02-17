@@ -1,0 +1,15 @@
+version: '3.8'
+
+# services will be Nginx, Posgres and NodeJS
+
+services:
+  ngx:
+    restart: always
+    container_name: ngx_cont
+    image: nginx:latest
+    ports:
+      - 80:80
+      - 443:443
+      - 9999:5432
+    volumes:
+      - ./mounts/nginx/
