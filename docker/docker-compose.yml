@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 # services will be Nginx, Posgres and NodeJS
 
@@ -8,8 +8,32 @@ services:
     container_name: ngx_cont
     image: nginx:latest
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
       - 9999:5432
     volumes:
-      - ./mounts/nginx/
+      - ./mounts/nginx/www:/etc/nginx/www
+      - ./mounts/nginx/nginx.conf:/etc/nginx/nginx.conf
+
+    networks:
+      - local_net
+      - wan_net
+
+  postgres:
+    restart: always
+    container_name: postgres_cont
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: psqadmin
+      POSTGRES_PASSWORD: psadmin01
+    volumes:
+      - ./mounts/postgres/pgdata:/var/lib/postgresql/data
+    networks:
+      - local_net
+
+networks:
+  local_net:
+    driver: bridge
+    internal: true
+  wan_net:
+    driver: bridge
