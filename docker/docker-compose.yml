@@ -1,7 +1,8 @@
 version: "3.8"
 
-# services will be Nginx, Posgres and NodeJS
+# before running this compose, make sure docker engine is started
 
+# services will be Nginx, Posgres and NodeJS
 services:
   ngx:
     restart: always
