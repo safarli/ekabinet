@@ -1,6 +1,15 @@
 .
-├── nginx
-│   ├── www
-│   └── nginx.conf
-├── nodeapp
-└── postgres
+├── mounts
+│   ├── nginx
+│   │   ├── www
+│   │   │   └── index.html
+│   │   └── nginx.conf
+│   ├── nodeapp
+│   │   └── .gitignore
+│   ├── postgres
+│   │   └── pgdata
+│   │       └── .gitignore
+│   └── gitkeep
+├── .gitignore
+├── docker-compose.yml
+└── mounts_dir_tree
