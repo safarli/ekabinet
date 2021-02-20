@@ -28,12 +28,13 @@ services:
       POSTGRES_USER: psqadmin
       POSTGRES_PASSWORD: psadmin01
     volumes:
-      - ./mounts/postgres/pgdata:/var/lib/postgresql/data
+      - postgresvol:/var/lib/postgresql/data
+      # - ./mounts/postgres/pgdata:/var/lib/postgresql/data
     networks:
       - local_net
 
 volumes:
-  psvolume:
+  postgresvol:
 
 networks:
   local_net:
