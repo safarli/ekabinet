@@ -32,6 +32,9 @@ services:
     networks:
       - local_net
 
+volumes:
+  psvolume:
+
 networks:
   local_net:
     driver: bridge
