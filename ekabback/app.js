@@ -4,7 +4,7 @@ const dbconn = require("./dbconn.js")
 const { response } = require("express")
 
 const app = express()
-const port = 3000
+const port = 3333
 
 app.use(bodyParser.json())
 app.use(
