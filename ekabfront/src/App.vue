@@ -9,6 +9,14 @@
 </template>
 
 <script>
+import axios from 'axios'
+
+axios.get("http://localhost:3333/users")
+.then(response => {
+    console.log(response)
+})
+
+
 export default {
     
 }
