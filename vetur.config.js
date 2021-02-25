@@ -7,7 +7,6 @@ module.exports = {
         {
             root: './ekabfront',
             package: './package.json',
-
         }
     ]
 }
