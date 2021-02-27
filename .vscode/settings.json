@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "167.99.43.151",
+            "port": 9999,
+            "driver": "PostgreSQL",
+            "name": "doceandockerpg",
+            "database": "postgres",
+            "username": "psqadmin",
+            "password": "psadmin01"
+        }
+    ]
+}
