@@ -3,17 +3,26 @@ import { createStore } from 'vuex'
 const store = createStore({
     state: function () {
         return {
-            count: 0,
+            sweets: [],
+            drinks: []
         }
     },
-    mutations: {
-        increment: function (state) {
-            state.count++
-        }
-    },
+
     getters: {
-        getCount: function (state) {
-            return state.count
+        getSweets: function (state) {
+            return state.sweets
+        },
+        getDrinks: function (state) {
+            return state.drinks
+        }
+    },
+
+    mutations: {
+        addSweet: function (state, payload) {
+            state.sweets.push(payload)
+        },
+        addDrink: function (state, payload) {
+            state.drinks.push(payload)
         }
     }
 })
