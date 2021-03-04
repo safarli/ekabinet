@@ -2,8 +2,6 @@
   <div>
     <h1>Salam aleykum</h1>
     <router-link to="/">Home Page</router-link>
-    <router-link to="/addpage">Add Page</router-link>
-    <router-link to="/viewpage">View Page</router-link>
     <router-link to="/inventory/view">Inventory View</router-link>
     <router-link to="/inventory/add">Inventory Add</router-link>
     <router-view></router-view>
