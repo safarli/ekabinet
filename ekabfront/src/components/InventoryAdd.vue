@@ -36,7 +36,7 @@ export default {
         name: this.selectedSweet,
         count: this.sweetCount
       }
-      this.$store.commit("addSweet", sweet);
+      this.$store.commit("ADD_SWEET", sweet);
     },
     addDrink() {
     },

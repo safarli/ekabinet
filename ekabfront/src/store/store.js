@@ -3,12 +3,16 @@ import { createStore } from 'vuex'
 const store = createStore({
     state: function () {
         return {
+            count: 0,
             sweets: [],
             drinks: []
         }
     },
 
     getters: {
+        getCount: function (state) {
+            return state.count;
+        },
         getSweets: function (state) {
             return state.sweets
         },
@@ -18,11 +22,21 @@ const store = createStore({
     },
 
     mutations: {
-        addSweet: function (state, payload) {
+        CHANGE_COUNT: function (state, payload) {
+            state.count += payload;
+        },
+        ADD_SWEET: function (state, payload) {
             state.sweets.push(payload)
         },
-        addDrink: function (state, payload) {
+        ADD_DRINK: function (state, payload) {
             state.drinks.push(payload)
+        }
+    },
+
+    actions: {
+        delayedChangeCount(context, payload) {
+            setTimeout(
+                () => {context.commit("CHANGE_COUNT", payload)}, 4000)
         }
     }
 })
