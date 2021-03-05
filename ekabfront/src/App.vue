@@ -1,34 +1,31 @@
 <template>
-  <div>
-    <h1>Salam aleykum</h1>
-    <router-link to="/">Home Page</router-link>
-    <router-link to="/inventory/view">Inventory View</router-link>
-    <router-link to="/inventory/add">Inventory Add</router-link>
-    <router-view></router-view>
-  </div>
+  <h1>App Main Navigation Menu</h1>
+  <router-link tag="a" to="/">HOME PAGE</router-link>
+  <router-link tag="a" to="/usermgmt">USER MANAGEMENT PAGE</router-link>
+  <router-view></router-view>
 </template>
 
+
 <script>
-export default {
-  data: function () {
-    return {
-    };
-  },
-  methods: {
-    
-  },
-};
+  export default {
+    data(){
+      return {
+
+      }
+    }
+  }
 </script>
 
-<style scoped>
-a {
-    border: 2px solid #333;
-    padding: 5px 10px;
-    margin: 2px;
+
+<style>
+  a {
+    font-weight: 600;
     text-decoration: none;
-}
-a:link, a:visited{}
-a:hover, a:active{
+    margin: 4px;
+    border: 2px solid #f0f;
+    padding: 6px;
+  }
+  a:hover {
     background-color: #ccc;
-}
+  }
 </style>
