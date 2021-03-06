@@ -8,9 +8,9 @@
         <th>Email</th>
       </tr>
       <tr v-for="user in users" :key="user.id">
-          <td>{{ user.id }}</td>
-          <td>{{ user.name }}</td>
-          <td>{{ user.email }}</td>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
       </tr>
     </table>
     <hr />
@@ -29,8 +29,30 @@ export default {
   },
   methods: {
     requestData() {
-      axios.get("http://api.wavevo.com/users").then((response) => this.users = response.data);
+      localStorage.setItem("user", "3");
+      axios
+        .get(`http://api.wavevo.com/users/${localStorage.getItem("user")}`)
+        .then((response) => (this.users = response.data));
     },
+  },
+  mounted: function () {
+    const mycar = new Object();
+
+    mycar.model = "yewka";
+    mycar.year = 1998;
+    mycar.fuel = "diesel";
+    mycar.type = "sedan";
+
+    for (const prop in mycar) {
+      console.log(mycar[prop]);
+    }
+    // Object.keys()
+    // Object.values()
+    // Object.entries()
+
+    const keys = Object.keys(mycar);
+    console.log(keys)
+
   },
 };
 </script>
