@@ -7,25 +7,23 @@
 
 
 <script>
-  export default {
-    data(){
-      return {
-
-      }
-    }
-  }
+export default {
+  data() {
+    return {};
+  },
+};
 </script>
 
 
 <style>
-  a {
-    font-weight: 600;
-    text-decoration: none;
-    margin: 4px;
-    border: 2px solid #f0f;
-    padding: 6px;
-  }
-  a:hover {
-    background-color: #ccc;
-  }
+a {
+  font-weight: 600;
+  text-decoration: none;
+  margin: 4px;
+  border: 2px solid #f0f;
+  padding: 6px;
+}
+a:hover {
+  background-color: #ccc;
+}
 </style>

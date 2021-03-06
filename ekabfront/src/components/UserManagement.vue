@@ -10,7 +10,7 @@
 <style scoped>
 .maindiv {
   width: 600px;
-  height: 360px;
+  /* height: 360px; */
   background-color: #afa;
 }
 </style>

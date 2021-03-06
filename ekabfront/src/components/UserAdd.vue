@@ -32,7 +32,9 @@ export default {
       axios
         .post("http://api.wavevo.com/users", user, { headers: headers })
         .then((response) => {
-          console.log(response.status);
+          this.user_name = "";
+          this.user_email = "";
+          alert(`RESPONSE FROM SERVER: ${response.status}`)
         });
     },
   },
@@ -43,6 +45,6 @@ export default {
 .maindiv {
   background-color: #acf;
   width: 300px;
-  height: 180px;
+  /* height: 180px; */
 }
 </style>

@@ -29,30 +29,27 @@ export default {
   },
   methods: {
     requestData() {
-      localStorage.setItem("user", "3");
+      localStorage.setItem("user", "");
       axios
         .get(`http://api.wavevo.com/users/${localStorage.getItem("user")}`)
         .then((response) => (this.users = response.data));
     },
   },
   mounted: function () {
-    const mycar = new Object();
+    const mypc = {};
 
-    mycar.model = "yewka";
-    mycar.year = 1998;
-    mycar.fuel = "diesel";
-    mycar.type = "sedan";
+    mypc["cpu"] = "core i7 7700hq";
+    mypc["ram"] = "DDR4 16gb";
+    mypc["gpu"] = "Nvidia GeForce GTX 1060Ti";
 
-    for (const prop in mycar) {
-      console.log(mycar[prop]);
+    for (const prop in mypc) {
+      console.log(prop)
     }
-    // Object.keys()
-    // Object.values()
-    // Object.entries()
 
-    const keys = Object.keys(mycar);
-    console.log(keys)
+    const entries = Object.entries(mypc);
 
+    console.log(entries);
+    console.log(mypc);
   },
 };
 </script>
@@ -60,7 +57,7 @@ export default {
 <style scoped>
 .maindiv {
   width: 300px;
-  height: 180px;
+  /* height: 180px; */
   background-color: #fcd;
 }
 
