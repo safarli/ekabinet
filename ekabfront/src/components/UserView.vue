@@ -39,6 +39,7 @@ export default {
     const mypc = {};
 
     mypc["cpu"] = "core i7 7700hq";
+    mypc["nic"] = "Realtek 1000TBASE Gigabit Ethernet";
     mypc["ram"] = "DDR4 16gb";
     mypc["gpu"] = "Nvidia GeForce GTX 1060Ti";
 
