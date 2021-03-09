@@ -1,0 +1,33 @@
+{
+  "name": "authrestapi",
+  "version": "1.0.0",
+  "description": "NODEJS EXPRESS REST API with JWT Authenticatioin and Postgres DB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS",
+    "Express",
+    "Postgresql",
+    "REST",
+    "API",
+    "HTTP",
+    "JWT",
+    "Token"
+  ],
+  "author": "Bendali Safarli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/safarli/ekabinet/issues"
+  },
+  "homepage": "https://github.com/safarli/ekabinet#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.5.1"
+  }
+}
