@@ -10,39 +10,35 @@ const conn_config = function (db = 'postgres') {
     }
 }
 
-
 const myclient = new pg.Client(conn_config())
 let mypool;
 
 
 const initDb = async function (dbname = 'magaza') {
-
     try {
-        
-    } catch (error) {
-        
-    }
-
-    try {
-        const dropResult = await myclient.query(`DROP DATABASE IF EXISTS ${dbname} WITH (FORCE);`)
-        console.log(dropResult)
+        await myclient.connect()
+        const dbDropResult = await myclient.query(`DROP DATABASE IF EXISTS ${dbname} WITH (FORCE);`)
+        console.log(dbDropResult)
+        const dbCreateResult = await myclient.query(`CREATE DATABASE ${dbname};`)
+        console.log(dbCreateResult)
     } catch (e) {
-        console.log(e)
+        console.error('ERROR OCCURED' + e)
     }
+    finally {
+        myclient.end()
+    }
+}
 
-    const createDbResult = await myclient.query(`CREATE DATABASE ${dbname}`)
-    console.log(createDbResult)
+const initTable = async function(){
+    try{
+        
+    }
+    catch(e){
 
-    const createTableResult = await myclient.query(`CREATE TABLE users(
-        user_id INT GENERATED ALWAYS AS IDENTITY,
-        user_name VARCHAR(50) NOT NULL,
-        user_email VARCHAR(100) NOT NULL,
-        PRIMARY KEY(user_id)
-    );`)
-    console.log(createTableResult)
-    mypool = new pg.Pool(conn_config())
-    mypool.query('sadfkasfsdk').then
+    }
+    finally{
 
+    }
 }
 
 
